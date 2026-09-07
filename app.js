@@ -2,7 +2,7 @@ const MEKKA_SZER = 51.440;
 const MEKKA_DLUG = 5.4724;
 const KOREKTA_KOMPASU = 0; 
 const TŁUMACZENIA = {
-    'pl': {
+    'en': {
         tytul_strony: "Kaaba Finder | Kompas",
         tytul: "Kompas do Kaaby",
         status_oczekujacy: "Oczekuję na lokalizację...",
@@ -17,17 +17,17 @@ const TŁUMACZENIA = {
         stopnie: "°",
         km: " km"
     },
-    'en': {
-        tytul_strony: "Kaaba Finder | Compass",
-        tytul: "Where is the Kaaba?",
-        status_oczekujacy: "Checking the location...",
-        status_sukces: "Location is configured.",
-        status_blad: "Location error.",
-        akt_lokalizacja: "Your location:",
-        etykieta_dystans: "Distance to Kaaba:",
-        kierunek_kaaby: "Degree to Kaaba (from N):",
-        info_przycisk: "Allow access to compass",
-        info_aktywny: "Compass is active. Aim at the Kaaba.",
+    'pl': {
+        tytul_strony: "Philipsmaxxxxing",
+        tytul: "where is the Gerard?",
+        status_oczekujacy: "checking the location...",
+        status_sukces: "location is configured.",
+        status_blad: "location error.",
+        akt_lokalizacja: "your location:",
+        etykieta_dystans: "distance to Philips:",
+        kierunek_kaaby: "degree to Philips (from N):",
+        info_przycisk: "allow access to compass",
+        info_aktywny: "Compass is active. Aim at the Gerard.",
         info_czekaj: "Calibrating...",
         stopnie: "°",
         km: " km"
