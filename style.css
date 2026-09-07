@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.pojemnik {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #000000;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.wybor-jezyka-kontener {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.wybor-jezyka {
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.wiadomosc {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    font-size: 14px;
+}
+
+.status-oczekujaca {
+    background-color: #ffffcc;
+}
+
+.status-sukces {
+    background-color: #ccffcc; 
+}
+
+.status-blad {
+    background-color: #ffcccc;
+}
+
+.kompas-kontener {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.kompas {
+    width: 250px;
+    height: 250px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    position: relative;
+    background-color: #ffffff;
+    transition: transform 0.1s linear; 
+}
+
+.kompas::after {
+    content: 'N';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ff0000; 
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.igla-kaaba {
+    width: 0;
+    height: 0;
+    
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 100px solid #000000; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    margin-top: -100px;
+    transform-origin: 50% 100%;
+    transform: translateX(-50%) rotate(0deg);
+    
+    z-index: 10;
+    transition: transform 0.2s ease-out;
+}
+
+.informacje {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #999999;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.informacje p {
+    margin: 5px 0;
+}
+
+.informacje span {
+    font-weight: bold;
+}
+
+.wskazowka {
+    font-style: italic;
+    color: #666666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.przycisk-przyznaj {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.przycisk-przyznaj:hover {
+    background-color: #333333;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl .informacje {
+    text-align: right;
+}
+
+.cel-namierzony .igla-kaaba {
+    border-bottom-color: #00cc00 !important; 
+}
