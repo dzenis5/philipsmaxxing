@@ -183,6 +183,8 @@ function startGPS() {
     } else elStatus.textContent = "Brak GPS.";
 }
 
+let lookingcounter = 0;
+
 function obslugaOrientacji(e) {
     if (kierunekKaaby === null) return;
     
@@ -207,22 +209,44 @@ function obslugaOrientacji(e) {
     if (roznica > 180) roznica = 360 - roznica;
     
     if (roznica < 3) {
+        lookingcounter++;
+        console.log("lookingcounter: " + lookingcounter);
         if (!elKompas.classList.contains('cel-namierzony')) {
             elKompas.classList.add('cel-namierzony');
             if (navigator.vibrate) navigator.vibrate(50);
         }
     } else elKompas.classList.remove('cel-namierzony');
+//triger gif when the phone is pointing to the statue,
+//  count time when pointed, when reached 5 seconds, 
+// show an random image from library and confetti for 1 second and text screenshot now!!!!!!
+    lookingcounter = 0;
 
-        if (roznica < 3) {
-            if (!elKompas.classList.contains('gif')) {
-                elKompas.classList.add('gif');
-                if (navigator.vibrate) navigator.vibrate(50);
-            }
-        } else elKompas.classList.remove('gif');
-    
     elInfo.textContent = TŁUMACZENIA[aktualnyJezyk].info_aktywny;
     elInfo.classList.remove('status-oczekujaca');
 }
+
+setinterval(() => { 
+  
+  
+
+  if(lookingcounter >= 5000){
+    console.log("SUCCESSSS");
+
+    function myFunction() {
+  myDisplayer("SCREENSHOT NOW");
+}
+
+// Function to display any text
+function myDisplayer(text) {
+  let demo = document.getElementById("demo"); 
+  demo.innerHTML += text + "<br>";
+}
+
+    //heres success
+    
+
+  }
+}, 1000);
 
 function startKompas() {
     const t = TŁUMACZENIA[aktualnyJezyk];
@@ -273,3 +297,58 @@ document.addEventListener('visibilitychange', () => {
 
 zmienJezyk('pl');
 startGPS();
+
+const confettiContainer = document.querySelector("#confetti-container");
+const showConfetti = () => {
+	const confetti = document.createElement("div");
+	confetti.textContent = "🎉";
+	confetti.classList.add("confetti");
+	confetti.style.left = Math.random() * innerWidth + "px";
+	confettiContainer.appendChild(confetti);
+
+	setTimeout(() => {
+		confetti.remove();
+	}, 5000);
+};
+
+setInterval(() => {
+	showConfetti();
+}, 400);
+
+
+// Call a Timeout
+setTimeout(myFunction, 3000000);
+
+// The callback function
+function myFunction() {
+  myDisplayer("SCREENSHOT NOW");
+}
+
+// Function to display any text
+function myDisplayer(text) {
+  let demo = document.getElementById("demo"); 
+  demo.innerHTML += text + "<br>";
+}
+
+// Call a Timeout
+setTimeout(randomImg1, 3000000);
+let areyoulooking = false;
+
+
+
+function randomImg1() {
+      var myImages1 = new Array ();
+      myImages1[1] = "philip/67.png";
+      myImages1[2] = "philip/artist.png";
+      myImages1[3] = "philip/base.png";
+      var rnd = Math.floor( Math.random() * myImages1.length );
+      if( rnd == 0 ) {
+        rnd =1;
+      }
+      html_code = '<img class="who" src="' + myImages1[rnd] + '" />';
+      document.write(html_code); 
+    
+}
+
+
+  
