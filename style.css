@@ -168,6 +168,7 @@ h1 {
     position: absolute;
     top: -80px; 
     left: -50px;
+    display: none;
 }
 
 .informacje {
