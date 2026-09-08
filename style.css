@@ -245,6 +245,7 @@ h1 {
 	justify-content: center;
 	height: 100vh;
     z-index: -1;
+	display: none;
 }
 
 .confetti {
