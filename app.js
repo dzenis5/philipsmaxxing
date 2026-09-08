@@ -231,7 +231,7 @@ function obslugaOrientacji(e) {
         }
 
         // Call a Timeout
-        setTimeout(randomImg1, 3000);
+        setTimeout(randomImg1, 8000);
         let areyoulooking = false;
 
 
