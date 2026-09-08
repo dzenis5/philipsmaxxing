@@ -256,7 +256,7 @@ function obslugaOrientacji(e) {
             document.write(html_code); 
             
         }
-    } else randomImg1.remove();
+    } else myImages1.remove();
 
         
 //triger gif when the phone is pointing to the statue,
