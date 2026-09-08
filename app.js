@@ -225,22 +225,6 @@ function obslugaOrientacji(e) {
     elInfo.classList.remove('status-oczekujaca');
 }
 
-setinterval(() => { 
-   if(lookingcounter >= 1){
-    console.log("SUCCESSSS");
-   
-
-  if(lookingcounter >= 50){
-    console.log("SUCCESSSS");
-
-    let  img = document.createElement("img");
-    img.src = "philips/spin.gif";
-    document.getElementById("target-element").appendChild(img);
-    //heres success
-    
-
-  }
-    }}, 1000);
 
 function startKompas() {
     const t = TŁUMACZENIA[aktualnyJezyk];
