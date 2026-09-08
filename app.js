@@ -212,6 +212,13 @@ function obslugaOrientacji(e) {
             if (navigator.vibrate) navigator.vibrate(50);
         }
     } else elKompas.classList.remove('cel-namierzony');
+
+        if (roznica < 3) {
+            if (!elKompas.classList.contains('gif')) {
+                elKompas.classList.add('gif');
+                if (navigator.vibrate) navigator.vibrate(50);
+            }
+        } else elKompas.classList.remove('gif');
     
     elInfo.textContent = TŁUMACZENIA[aktualnyJezyk].info_aktywny;
     elInfo.classList.remove('status-oczekujaca');
