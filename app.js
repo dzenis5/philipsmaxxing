@@ -209,17 +209,59 @@ function obslugaOrientacji(e) {
     if (roznica > 180) roznica = 360 - roznica;
     
     if (roznica < 3) {
-        lookingcounter++;
-        console.log("lookingcounter: " + lookingcounter);
         if (!elKompas.classList.contains('cel-namierzony')) {
             elKompas.classList.add('cel-namierzony');
             if (navigator.vibrate) navigator.vibrate(50);
         }
     } else elKompas.classList.remove('cel-namierzony');
+
+    if (roznica < 3) {
+        // Call a Timeout
+        setTimeout(myFunction, 3000);
+
+        // The callback function
+        function myFunction() {
+        myDisplayer("SCREENSHOT NOW");
+        }
+
+        // Function to display any text
+        function myDisplayer(text) {
+        let demo = document.getElementById("demo"); 
+        demo.innerHTML += text + "<br>";
+        }
+
+        // Call a Timeout
+        setTimeout(randomImg1, 3000);
+        let areyoulooking = false;
+
+
+
+        function randomImg1() {
+            var myImages1 = new Array ();
+            myImages1[1] = "philip/67.png";
+            myImages1[2] = "philip/artist.png";
+            myImages1[3] = "philip/base.png";
+            myImages1[4] = "philip/blush.png";
+            myImages1[5] = "philip/clown.png";
+            myImages1[6] = "philip/lolipop.png";
+            myImages1[7] = "philip/princess.png";
+            myImages1[8] = "philip/sleepy.png";
+            myImages1[9] = "philip/special.png";
+            myImages1[10] = "philip/thubsup.png";
+            var rnd = Math.floor( Math.random() * myImages1.length );
+            if( rnd == 0 ) {
+                rnd =1;
+            }
+            html_code = '<img class="who" src="' + myImages1[rnd] + '" />';
+            document.write(html_code); 
+            
+        }
+    } else randomImg1.remove();
+
+        
 //triger gif when the phone is pointing to the statue,
 //  count time when pointed, when reached 5 seconds, 
 // show an random image from library and confetti for 1 second and text screenshot now!!!!!!
-    lookingcounter = 0;
 
     elInfo.textContent = TŁUMACZENIA[aktualnyJezyk].info_aktywny;
     elInfo.classList.remove('status-oczekujaca');
@@ -309,7 +351,7 @@ function myDisplayer(text) {
 }
 
 // Call a Timeout
-setTimeout(randomImg1, 3000000);
+setTimeout(randomImg1, 30000000);
 let areyoulooking = false;
 
 
@@ -319,6 +361,13 @@ function randomImg1() {
       myImages1[1] = "philip/67.png";
       myImages1[2] = "philip/artist.png";
       myImages1[3] = "philip/base.png";
+      myImages1[4] = "philip/blush.png";
+      myImages1[5] = "philip/clown.png";
+      myImages1[6] = "philip/lolipop.png";
+      myImages1[7] = "philip/princess.png";
+      myImages1[8] = "philip/sleepy.png";
+      myImages1[9] = "philip/special.png";
+      myImages1[10] = "philip/thubsup.png";
       var rnd = Math.floor( Math.random() * myImages1.length );
       if( rnd == 0 ) {
         rnd =1;
