@@ -168,7 +168,7 @@ h1 {
     position: absolute;
     top: -80px; 
     left: -50px;
-    visibility: hidden;
+    opacity: 0;
 }
 
 .informacje {
@@ -226,7 +226,9 @@ h1 {
     border-bottom-color: 	#0b5ed7 !important; 
 }
 .cel-namierzony .gif {
-    visibility: visible;}
+    opacity: 1 !important;
+}
+
 .demo{
     color: red;
 }
