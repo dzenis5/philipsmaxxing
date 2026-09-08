@@ -225,7 +225,8 @@ h1 {
 .cel-namierzony .igla-kaaba {
     border-bottom-color: 	#0b5ed7 !important; 
 }
-
+.cel-namierzony .gif {
+    display: absolute;}
 .demo{
     color: red;
 }
