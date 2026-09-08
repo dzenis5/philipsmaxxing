@@ -226,27 +226,21 @@ function obslugaOrientacji(e) {
 }
 
 setinterval(() => { 
-  
-  
+   if(lookingcounter >= 1){
+    console.log("SUCCESSSS");
+   
 
-  if(lookingcounter >= 5000){
+  if(lookingcounter >= 50){
     console.log("SUCCESSSS");
 
-    function myFunction() {
-  myDisplayer("SCREENSHOT NOW");
-}
-
-// Function to display any text
-function myDisplayer(text) {
-  let demo = document.getElementById("demo"); 
-  demo.innerHTML += text + "<br>";
-}
-
+    let  img = document.createElement("img");
+    img.src = "philips/spin.gif";
+    document.getElementById("target-element").appendChild(img);
     //heres success
     
 
   }
-}, 1000);
+    }}, 1000);
 
 function startKompas() {
     const t = TŁUMACZENIA[aktualnyJezyk];
